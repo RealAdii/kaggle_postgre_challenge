@@ -62,9 +62,9 @@ refresh were not tested. Persistent checkpoint and resume remain future work.
 ## Reproduction
 
 The benchmark scripts, machine-readable reports, and source are in the public
-repository below. The exact submission commit is included once the repository
-fork and final commit are published.
+repository below. The submission tag points to the exact code commit used for
+the measurements.
 
-Repository: pending
+Repository: https://github.com/RealAdii/kaggle_postgre_challenge
 
-Submission commit: pending
+Submission commit: 56882882e089d545ef9973e4035bc21e53abb452
