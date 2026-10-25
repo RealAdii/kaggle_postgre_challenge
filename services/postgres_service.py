@@ -17,6 +17,8 @@ from pathlib import Path
 import paramiko
 import pandas as pd
 
+from services.expansion_optimizer import optimize_sparse_positions
+
 from config import (
     CONTROL_DB,
     CONTROL_SCHEMA,
@@ -13973,7 +13975,7 @@ SELECT json_build_object(
                 ):
                     execution_statements.append(
                         self._build_managed_dml_sql(
-                            statement,
+                            optimize_sparse_positions(statement),
                             destination["schema_name"],
                             destination["pure_table_name"],
                             "add",

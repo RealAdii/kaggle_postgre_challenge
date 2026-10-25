@@ -1,0 +1,51 @@
+{
+  "upstream_commit": "5dfde9d967425982229b92d6ffe98efcd74612e9",
+  "raw_rows": 100000,
+  "destination_rows": [
+    {
+      "table_name": "public.table3",
+      "rows": 4
+    },
+    {
+      "table_name": "public.table4",
+      "rows": 26
+    },
+    {
+      "table_name": "public.table1",
+      "rows": 100000
+    },
+    {
+      "table_name": "public.table5",
+      "rows": 100000
+    },
+    {
+      "table_name": "public.table6",
+      "rows": 100000
+    },
+    {
+      "table_name": "public.table2",
+      "rows": 232386
+    }
+  ],
+  "total_rows_inserted": 532416,
+  "metric": "Sum of service timing-report items where include_in_total is true, corresponding to the challenge MEASURED PROCESSING TOTAL",
+  "baseline_measured_processing_total_seconds": 9.275002918,
+  "candidate_measured_processing_total_seconds": 8.087492833,
+  "time_reduction_percent": 12.803339206453494,
+  "same_destination_row_counts": true,
+  "registered_versions_baseline": 6,
+  "registered_versions_candidate": 6,
+  "client_environment": "macOS headless service via SSH stdio proxy to PostgreSQL 17.11, Linux aarch64 Docker",
+  "windows_gui_verified": false,
+  "official_judge_reproduced": false,
+  "note": "One paired full-service observation. It is local development evidence, not an organizer score.",
+  "source_engine_sha256": "16e05b005ff002696d1e65de6de20d950366866120491755f6e86d9f982d2678",
+  "official_recipes_and_generator_unchanged": true,
+  "hotspot_500k_sql_only": {
+    "baseline_median_ms": 25637.0435,
+    "candidate_median_ms": 25185.33,
+    "time_reduction_percent": 1.7619562879783623,
+    "rows_per_source": 1160806,
+    "exact_multiset_comparison": "passed"
+  }
+}

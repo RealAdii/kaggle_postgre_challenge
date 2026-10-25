@@ -34,3 +34,8 @@ Thumbs.db
 build/
 dist/
 *.egg-info/
+
+# Local competition benchmarks
+.venv/
+.pytest_cache/
+benchmarks/results/*.log

@@ -1,0 +1,64 @@
+{
+  "upstream_commit": "5dfde9d967425982229b92d6ffe98efcd74612e9",
+  "raw_rows": 100000,
+  "generator_sha256": "2b57fa720ebc49a0afde17fd6c213f239e7bd65487eb47e425d8efd85f01eadf",
+  "candidate_sha256": "f2cb6ea157d0459f9819a528069939987ae39e62143da9cf0a6d8dad40e5ef40",
+  "metric": "PostgreSQL EXPLAIN ANALYZE execution time for table2 only",
+  "complete_application_processing_total": false,
+  "exact_multiset_comparison": "passed, all columns except generated table2 identity",
+  "median_ms": {
+    "baseline": 5249.5205000000005,
+    "candidate": 3962.9089999999997
+  },
+  "speedup": 1.3246633975193478,
+  "runs": [
+    {
+      "pair": 0,
+      "variant": "baseline",
+      "execution_ms": 3568.441,
+      "rows": 232386
+    },
+    {
+      "pair": 0,
+      "variant": "candidate",
+      "execution_ms": 2422.542,
+      "rows": 232386
+    },
+    {
+      "pair": 1,
+      "variant": "candidate",
+      "execution_ms": 3516.591,
+      "rows": 232386
+    },
+    {
+      "pair": 1,
+      "variant": "baseline",
+      "execution_ms": 6695.311,
+      "rows": 232386
+    },
+    {
+      "pair": 2,
+      "variant": "baseline",
+      "execution_ms": 6033.863,
+      "rows": 232386
+    },
+    {
+      "pair": 2,
+      "variant": "candidate",
+      "execution_ms": 4409.227,
+      "rows": 232386
+    },
+    {
+      "pair": 3,
+      "variant": "candidate",
+      "execution_ms": 4591.794,
+      "rows": 232386
+    },
+    {
+      "pair": 3,
+      "variant": "baseline",
+      "execution_ms": 4465.178,
+      "rows": 232386
+    }
+  ]
+}
