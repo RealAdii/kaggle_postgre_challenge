@@ -1,4 +1,4 @@
-# Faster sparse position expansion for JSONB records
+# Position First: A Faster Sparse JSONB Expansion
 
 ## Summary
 
@@ -28,13 +28,16 @@ Exact multiset comparisons passed for the table2 outputs at both sizes, apart
 from generated surrogate identifiers. The 500,000 row statement produced
 1,160,806 child rows per pass.
 
-At 100,000 source rows, I also measured the real service path over SSH across
-all six destination recipes. The challenge `MEASURED PROCESSING TOTAL` was
-9.275003 seconds for baseline and 8.087493 seconds for the candidate, a 12.8%
-reduction. Both runs inserted 532,416 rows, produced identical destination row
-counts, and registered all six versions. The service test ran on PostgreSQL
-17.11 in a Linux aarch64 Docker container, controlled by the macOS headless
-service over an SSH stdio proxy.
+At 100,000 source rows, I measured the real service path over SSH across all
+six destination recipes twice. The first pair took 9.275003 seconds for
+baseline and 8.087493 seconds for the candidate, a 12.8% reduction. A second
+pair immediately after fresh database generation took 18.361260 seconds for
+baseline and 17.040695 seconds for the candidate, a 7.2% reduction. Both pairs
+inserted 532,416 rows, produced identical destination row counts, and registered
+all six versions. The service ran on PostgreSQL 17.11 in a Linux aarch64 Docker
+container, controlled by the macOS headless service over an SSH stdio proxy.
+These two local observations show material run to run variation and are not
+organizer results.
 
 The 500,000 row full-service run was not completed because local Docker
 checkpoint synchronization was unusually slow. The 500,000 row result above is
@@ -54,10 +57,11 @@ transaction behavior. Persistent checkpoint and resume are not implemented.
 
 ## Limitations
 
-The 100,000 row full-service measurement is one local paired observation, not an
-organizer score. The 500,000 row SQL improvement is modest. Peak memory and
-temporary storage were not profiled. The Windows graphical client and its final
-refresh were not tested. Persistent checkpoint and resume remain future work.
+The 100,000 row full-service measurements are two local paired observations,
+not an organizer score. The 500,000 row SQL improvement is modest. Peak memory
+and temporary storage were not profiled. The Windows graphical client and its
+final refresh were not tested. Persistent checkpoint and resume remain future
+work.
 
 ## Reproduction
 

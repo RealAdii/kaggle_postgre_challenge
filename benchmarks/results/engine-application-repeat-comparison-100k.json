@@ -1,0 +1,18 @@
+{
+  "raw_rows": 100000,
+  "upstream_commit": "5dfde9d967425982229b92d6ffe98efcd74612e9",
+  "source_rows": 100000,
+  "total_rows_inserted_baseline": 532416,
+  "total_rows_inserted_candidate": 532416,
+  "baseline_measured_processing_total_seconds": 18.361260164,
+  "candidate_measured_processing_total_seconds": 17.040694792,
+  "time_reduction_percent": 7.192128210182258,
+  "official_recipes_and_generator_unchanged": true,
+  "official_judge_reproduced": false,
+  "run_order": "baseline then candidate; fresh database generated immediately before the pair",
+  "note": "Second full-service pair. Results vary materially from the earlier pair, so this is indicative local evidence, not an organizer score.",
+  "reports": {
+    "baseline": "engine-application-baseline-repeat-100k.json",
+    "candidate": "engine-application-candidate-repeat-100k.json"
+  }
+}

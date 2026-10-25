@@ -72,12 +72,17 @@ a 25,185.330 ms candidate median, a 1.8 percent reduction. Exact multiset
 comparison passed. This result is limited to table2 and does not establish a
 large full application improvement. See `results/engine-hotspot-500k.json`.
 
-The real service path over SSH was measured at 100,000 source rows using the
-challenge's `MEASURED PROCESSING TOTAL` calculation. The baseline took 9.275003
-seconds and the candidate took 8.087493 seconds, a 12.8 percent reduction.
-Both runs inserted 532,416 rows and registered all six destination versions
-with matching row counts. See `results/engine-application-comparison-100k.json`
-and its baseline and candidate reports.
+The real service path over SSH was measured twice at 100,000 source rows using
+the challenge's `MEASURED PROCESSING TOTAL` calculation. The first pair took
+9.275003 seconds for baseline and 8.087493 seconds for candidate, a 12.8 percent
+reduction. A second pair, run immediately after fresh database generation,
+took 18.361260 seconds for baseline and 17.040695 seconds for candidate, a 7.2
+percent reduction. Both pairs inserted 532,416 rows and registered all six
+destination versions with matching row counts. Timing varied substantially, so
+these are preliminary local measurements, not organizer results. See
+`results/engine-application-comparison-100k.json` and
+`results/engine-application-repeat-comparison-100k.json` with the underlying
+per-run reports.
 
 ## Limitations and history
 
